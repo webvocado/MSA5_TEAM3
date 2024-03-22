@@ -14,3 +14,6 @@ git config user.email ehgml7184@naver.com
 
 ✅기존에 다른 사용자로 등록 되어있으면,
 [자격 증명 관리자] > [Windows 자격증명 관리] > [github관련] > 제거
+
+
+내 브랜치에만 두고싶은데...
