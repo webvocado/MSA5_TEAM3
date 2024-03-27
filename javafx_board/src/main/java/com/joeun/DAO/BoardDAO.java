@@ -7,9 +7,6 @@ import java.util.List;
 import com.joeun.DTO.Board;
 
 
-
-
-
 /**
  *  데이터 접근 객체
  *  - 게시글 데이터 접근
@@ -46,6 +43,7 @@ public class BoardDAO extends JDBConnection {
 				board.setContent( rs.getString("content") );
 				board.setRegDate( rs.getTimestamp("reg_date") );
 				board.setUpdDate( rs.getTimestamp("upd_date") );
+				board.setView( rs.getInt("views") );
 				
 				// 게시글 목록에 추가
 				boardList.add(board);
@@ -64,10 +62,12 @@ public class BoardDAO extends JDBConnection {
 		// 게시글 정보 객체 생성
 		Board board = new Board();
 		
-		// SQL 작성
+		// 조회할 게시글 찾는 SQL문 작성
 		String sql = " SELECT * "
 				   + " FROM board "
 				   + " WHERE no = ? ";
+
+		
 		try {
 			// 쿼리(SQL) 실행 객체 생성 - PreparedStatement (psmt)
 			psmt = con.prepareStatement(sql);
@@ -89,6 +89,22 @@ public class BoardDAO extends JDBConnection {
 				board.setContent( rs.getString("content") );
 				board.setRegDate( rs.getTimestamp("reg_date") );
 				board.setUpdDate( rs.getTimestamp("upd_date") );
+
+
+				//조회 됐으면, 조회 수 증가시킬 sql문 작성
+				sql = " UPDATE BOARD "
+					+ " SET VIEWS = VIEWS + 1"
+					+ " WHERE no = ? ";
+
+				// sql 쿼리 실행할 psmt 객체 만들고
+				psmt = con.prepareStatement(sql);
+
+				// 물음표에 매핑값 넣어주기
+				psmt.setInt( 1, no );
+
+				// 쿼리(SQL) 실행 -> 결과  - ResultSet (rs)
+				rs = psmt.executeQuery();
+				
 				
 			}
 		} catch(SQLException e) {
