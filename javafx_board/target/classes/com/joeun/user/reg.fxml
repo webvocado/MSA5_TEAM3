@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="572.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.joeun.Controller.RegController">
+   <children>
+      <Text layoutX="177.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="회원가입">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Text>
+      <Label contentDisplay="TOP" layoutX="53.0" layoutY="248.0" lineSpacing="2.0" prefWidth="62.0" text="이름" textFill="#f79f81">
+         <font>
+            <Font name="Calisto MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tName" alignment="CENTER" layoutX="161.0" layoutY="241.0" prefHeight="37.0" prefWidth="310.0" promptText="이름">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label contentDisplay="TOP" layoutX="53.0" layoutY="297.0" lineSpacing="2.0" prefWidth="62.0" text="ID" textFill="#f79f81">
+         <font>
+            <Font name="Calisto MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tId" alignment="CENTER" layoutX="161.0" layoutY="289.0" prefHeight="37.0" prefWidth="310.0" promptText="아이디">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label contentDisplay="TOP" layoutX="53.0" layoutY="344.0" lineSpacing="2.0" prefHeight="23.0" prefWidth="81.0" text="Password" textFill="#f79f81">
+         <font>
+            <Font name="Calisto MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="tPw" alignment="CENTER" layoutX="161.0" layoutY="335.0" prefHeight="37.0" prefWidth="310.0" promptText="패스워드">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+      <Circle accessibleRole="IMAGE_VIEW" fill="#f79f81" layoutX="269.0" layoutY="-103.0" opacity="0.36" radius="162.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.bottomAnchor="665.0" />
+      <TextArea layoutX="33.0" layoutY="403.0" prefHeight="195.0" prefWidth="503.0" text="&#10;본 사이트는 어쩌구 저쩌구 회원의 정보를 사실 저장하는데 자바가 계속 들어도 어려워용 &#10;그래도 재밌어요 1조 항 가입하면 탈퇴불가능 2.진짜 사용하는 아이디 쓰지말긔3.&#10;지금 안건데 엔터가 안먹히네요 이게뭔가요 아니네 엔터 먹히네&#10;회원가입 조항 뭐 그런거 없어요 그냥 가입해주세요 &#10;&#10;1.알로하~ 알로하 라는 억양이 좋네요 여기에는 사실 회원가입 조항이 들어가요&#10;2.우리가 그동안 배운걸로 사이트 만들고 가입하고 너무 재밌네여&#10;3.팀미션 처음해보는거라 재밌네여 젊음이 최고임&#10;4.대학생때 해봤네여 생각해보니..얼마만이야 한 10년만..인가&#10;5.아이디 유출 완전 가능 다른걸로 쓰세요 오 근데 이렇게 되는게 신기한거같아요&#10;스크롤이 왜 가로로도 생기지..진짜 너무 지저분해보인다.&#10;이제그만 가입해주세요 끝&#10;" />
+      <Separator layoutX="40.0" layoutY="380.0" prefHeight="10.0" prefWidth="489.0" />
+      <Separator layoutX="138.0" layoutY="342.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="4.0" />
+      <Separator layoutX="138.0" layoutY="296.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="4.0" />
+      <Separator layoutX="138.0" layoutY="247.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="4.0" />
+      <Button layoutX="130.0" layoutY="628.0" mnemonicParsing="false" onAction="#insert" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: #F79F81;" text="계정 생성" textFill="WHITE">
+         <effect>
+            <Blend mode="RED" />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
