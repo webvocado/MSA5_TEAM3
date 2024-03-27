@@ -21,7 +21,6 @@ public class LoginController {
     @FXML
     private PasswordField tPw;
 
-
     static private UserService userService = new UserServiceImpl();
 
     @FXML
