@@ -33,31 +33,6 @@ public class SelectController {
         //글삭제
     }
 
-    // @FXML
-    // void update(ActionEvent event) {
-    //     Board board = new Board(tTitle.getText(), tWriter.getText(), tContent.getText());
-    //     // 조회해서 입력해서 조회한 게시글 그대로...
-    //     board = boardService.select( Integer.parseInt(tSelect.getText()) );
-        
-    //     //수정 전
-    //     System.out.println("수정 전------");
-    //     System.out.println(board.getTitle());
-    //     System.out.println(board.getWriter());
-    //     System.out.println(board.getContent());
-
-    //     // 입력창에 입력된 대로 수정하기
-    //     board.setTitle(tTitle.getText());
-    //     board.setWriter(tWriter.getText());
-    //     board.setContent(tContent.getText());
-    //     /* upd_date는 BoardDAO의 update 함수 내 쿼리문에서 sysdate로 알아서 변경됨 */
-
-    //     boardService.update(board); /*수정하는 함수 */
-    //     System.out.println("수정 후---");
-    //     System.out.println(board.getTitle());
-    //     System.out.println(board.getWriter());
-    //     System.out.println(board.getContent());
-    // }
-
     @FXML
     void update(ActionEvent event) {
 
