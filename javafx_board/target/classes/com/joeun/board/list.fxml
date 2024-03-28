@@ -12,7 +12,6 @@
         <columns>
           <TableColumn fx:id="colNo" prefWidth="60.0" text="번호" />
             <TableColumn fx:id="colRegDate" prefWidth="120.0" text="등록일자" />
-            <TableColumn fx:id="colView" prefWidth="99.0" text="조회수" />
           <TableColumn fx:id="colTitle" prefWidth="320.0" text="제목" />
             <TableColumn fx:id="colWriter" prefWidth="120.0" text="작성자" />
             <TableColumn fx:id="colView" prefWidth="120.0" text="조회수" />
