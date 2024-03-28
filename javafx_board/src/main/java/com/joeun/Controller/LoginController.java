@@ -11,7 +11,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.control.Alert.AlertType;
 
 public class LoginController {
 
@@ -36,6 +35,12 @@ public class LoginController {
             moveToMain(event);
         } else {
             System.out.println("유효하지 않은 계정이거나, 비밀번호가 올바르지 않습니다.");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("로그인 실패");
+            alert.setHeaderText(null);
+            alert.setContentText("유효하지 않은 계정이거나, 비밀번호가 올바르지 않습니다.");
+            alert.showAndWait();
+            
             tPw.clear();
             tPw.requestFocus();
         }
@@ -53,9 +58,4 @@ public class LoginController {
     }
 
 
-    public void message(String content) {
-        Alert alert = new Alert(AlertType.INFORMATION);
-        alert.setContentText(content);
-        alert.show();
-    }
 }

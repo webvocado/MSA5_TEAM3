@@ -11,6 +11,9 @@ public interface UserService {
     // 회원가입 (유저등록)
     int insert(User user);
 
+    // 회원가입 시 아이디 중복체크
+    boolean doubleCheck(String inputId);
+
     
     
 } 

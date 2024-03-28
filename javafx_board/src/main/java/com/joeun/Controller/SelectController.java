@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 
 public class SelectController {
 
@@ -46,18 +47,24 @@ public class SelectController {
     }
 
     @FXML
-    void update(ActionEvent event) {
+    void update(ActionEvent event) throws IOException {
         //글수정
         int result = 0;
 
         Board board = new Board(tTitle.getText(), tWriter.getText(),tContent.getText());
         board.setNo( Integer.parseInt(tSelect.getText()) );
-        boardService.update(board);
+        result = boardService.update(board);
 
-        if (result > 1) {
-             System.out.println("수정 반영완료");
-             // alert("수정반영완료");
-         }
+        if (result > 0) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("수정");
+            alert.setHeaderText(null);
+            alert.setContentText("게시글 수정이 완료되었습니다.");
+            alert.showAndWait();
+
+            System.out.println("수정 반영완료");
+            App.setRoot("board/list");
+        }
     }
 
     @FXML
@@ -90,5 +97,10 @@ public class SelectController {
         tWriter.setText(board.getWriter()); // 작성자 설정
         tContent.setText(board.getContent()); // 내용 설정
     }
+
+    // public void message (String str) {
+    //     Alert alert = new Alert(Alert.AlertType.ERROR);
+    //     alert.setContentText(str);
+    // }
 
 }

@@ -34,6 +34,18 @@ public class UserServiceImpl implements UserService{
         return result;
     }
 
+    @Override
+    public boolean doubleCheck(String inputId) {
+        // DAO 객체로부터 리턴되는 값을 받기위해 int 형 result 변수 생성
+        boolean result = false;
+
+        // 1. DAO 객체에 입력된 아이디를 매개변수로 넘겨서 데이터베이스에 존재하는지 체크
+        result = userDAO.doubleCheck(inputId);
+
+        return result;
+
+    }
+
     
     
 }

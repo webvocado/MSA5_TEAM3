@@ -48,6 +48,7 @@ public class InsertController {
 		//       1 --> 데이터 등록 성공
         if ( result > 0 ) {
             System.out.println("글쓰기 처리 성공!");
+            
             // 게시글 목록 화면(메인)으로 이동
             App.setRoot("board/List");
         }

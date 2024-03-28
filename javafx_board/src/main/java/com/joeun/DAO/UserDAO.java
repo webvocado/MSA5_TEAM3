@@ -67,4 +67,32 @@ public class UserDAO extends JDBConnection {
         }
         return IsExist;
     }
+
+    // 회원가입 시, 아이디 중복체크
+	// 매개변수로 받은 아이디가 데이터베이스에 존재하는지 체크
+	public boolean doubleCheck(String inputId) {
+		boolean IsExist = false;
+
+		String sql = " SELECT * "
+				   + " FROM USERS "
+				   + " WHERE id = ? ";
+		
+		try {
+			psmt =  con.prepareStatement(sql);
+			psmt.setString(1, inputId);
+
+			rs = psmt.executeQuery();
+
+			if (rs.next()) { //조회 결과가 있으면 true로 실행
+				IsExist =  true;
+			} else {
+                IsExist = false;
+            }
+
+		} catch (Exception e) {
+            System.err.println("아이디 중복체크 시, 예외 발생");
+			e.printStackTrace();
+		}
+		return IsExist;
+	}
 }
