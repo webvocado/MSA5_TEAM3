@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -9,39 +11,53 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.joeun.Controller.InsertController">
    <children>
-      <Label layoutX="417.0" layoutY="48.0" text="글쓰기">
+      <Label layoutX="28.0" layoutY="28.0" prefHeight="30.0" prefWidth="177.0" text="게시글 등록" textFill="#947d7d">
          <font>
-            <Font size="31.0" />
+            <Font name="Bodoni MT Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="tTtile" layoutX="257.0" layoutY="125.0" prefHeight="59.0" prefWidth="584.0">
+      <TextField fx:id="tTtile" layoutX="144.0" layoutY="108.0" prefHeight="38.0" prefWidth="611.0">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
-      <Label layoutX="107.0" layoutY="136.0" text="제목">
+      <Label layoutX="35.0" layoutY="125.0" text="제목" textFill="#947d7d">
          <font>
-            <Font size="31.0" />
+            <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="tWriter" layoutX="257.0" layoutY="228.0" prefHeight="59.0" prefWidth="584.0">
+      <TextField fx:id="tWriter" layoutX="144.0" layoutY="157.0" prefHeight="38.0" prefWidth="611.0">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
-      <Label layoutX="107.0" layoutY="239.0" text="작성자">
+      <Label layoutX="35.0" layoutY="173.0" text="작성자" textFill="#947d7d">
          <font>
-            <Font size="31.0" />
+            <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="tContent" layoutX="107.0" layoutY="319.0" prefHeight="210.0" prefWidth="735.0">
+      <TextArea fx:id="tContent" layoutX="142.0" layoutY="209.0" prefHeight="377.0" prefWidth="747.0">
          <font>
             <Font size="20.0" />
          </font>
       </TextArea>
-      <Button layoutX="684.0" layoutY="544.0" mnemonicParsing="false" onAction="#insert" prefHeight="50.0" prefWidth="158.0" text="등록">
+      <Button layoutX="755.0" layoutY="597.0" mnemonicParsing="false" onAction="#moveToList" prefHeight="37.0" prefWidth="130.0" style="-fx-background-color: #F79F81;" text="목록 보기" textFill="WHITE">
          <font>
-            <Font size="24.0" />
+            <Font name="Batang" size="17.0" />
+         </font>
+      </Button>
+      <ScrollBar layoutX="874.0" layoutY="212.0" orientation="VERTICAL" prefHeight="371.0" prefWidth="14.0" />
+      <Label layoutX="33.0" layoutY="364.0" text="내용" textFill="#947d7d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="72.0" prefHeight="0.0" prefWidth="901.0" />
+      <Separator layoutX="122.0" layoutY="209.0" orientation="VERTICAL" prefHeight="377.0" prefWidth="0.0" />
+      <Separator layoutX="122.0" layoutY="108.0" orientation="VERTICAL" prefHeight="86.0" prefWidth="6.0" />
+      <Button layoutX="611.0" layoutY="597.0" mnemonicParsing="false" onAction="#insert" prefHeight="37.0" prefWidth="130.0" style="-fx-background-color: #F79F81;" text="게시글 등록" textFill="WHITE">
+         <font>
+            <Font name="Batang" size="17.0" />
          </font>
       </Button>
    </children>
