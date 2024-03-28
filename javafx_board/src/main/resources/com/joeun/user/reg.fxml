@@ -60,5 +60,10 @@
             <Blend mode="RED" />
          </effect>
       </Button>
+      <Button layoutX="659.0" layoutY="188.0" mnemonicParsing="false" onAction="#doubleCheck" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #F79F81;" text="중복체크" textFill="WHITE">
+         <effect>
+            <Blend mode="RED" />
+         </effect>
+      </Button>
    </children>
 </AnchorPane>

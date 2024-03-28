@@ -31,7 +31,10 @@ public class RegController {
     // }
 
     // 유저 등록 처리
-    public void insert(ActionEvent event) throws Exception {
+    @FXML
+    void insert(ActionEvent event) throws Exception {
+
+        
         
         // register.fxml에 입력된 데이터를 가져와서 새로운 board 객체 생성
         User user = new User(tName.getText(), tId.getText(), tPw.getText());
@@ -48,6 +51,18 @@ public class RegController {
         if (result > 0) {
             System.out.println("회원가입 성공!");
             App.setRoot("user/login");
+        }
+    }
+
+    @FXML
+    void doubleCheck(ActionEvent event) {
+        if (userService.doubleCheck(tId.getText())) { // 중복이면 doublecheck가 true 반환함
+            System.out.println("아이디 중복입니다.");
+            tId.clear();
+            tId.requestFocus();
+        } else {
+            System.out.println("사용가능한 아이디 입니다.");
+            tPw.requestFocus();
         }
     }
 }
