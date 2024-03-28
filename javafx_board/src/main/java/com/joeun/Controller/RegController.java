@@ -50,11 +50,4 @@ public class RegController {
             App.setRoot("user/login");
         }
     }
-
-    public void read(int boardNo) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'read'");
-    }
-
-
 }

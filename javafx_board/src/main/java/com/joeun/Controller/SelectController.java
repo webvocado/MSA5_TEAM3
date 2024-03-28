@@ -35,15 +35,16 @@ public class SelectController {
 
     @FXML
     void update(ActionEvent event) {
-        
-        String boardContent = tContent.getText();
-        String boardTitle = tTitle.getText();
-        String boardWriter = tWriter.getText();
-        Board board = new Board(boardTitle, boardWriter, boardContent);
-        board.setNo( Integer.parseInt(tSelect.getText()) );
+        //글수정
+        int result = 0;
 
+        Board board = new Board(tTtile.getText(), tWriter.getText(),tContent.getText());
         boardService.update(board);
-        
+
+        if (result > 1) {
+             System.out.println("수정 반영완료");
+             // alert("수정반영완료");
+         }
     }
 
     @FXML
@@ -58,16 +59,15 @@ public class SelectController {
         // //조회버튼 눌렀을 때 작동할 함수
         board = boardService.select( Integer.parseInt(tSelect.getText()) );
 
-        // 원하는 게시글 잘 찾았는지 체크하는 출력문 (지워도됌)
+        // 원하는 게시글 잘 찾았는지 콘솔창에 체크하는 출력문 (지워도됌)
         System.out.println(board.getTitle());
         System.out.println(board.getWriter());
         System.out.println(board.getContent());
-
+      
+        //fxml화면에 조회된 타이틀, 작성자, 내용 뿌림
         tTitle.setText(board.getTitle());
         tWriter.setText(board.getWriter());
         tContent.setText(board.getContent());
-
-
     }
 
     // 선택된 게시글 정보를 받아서 화면에 표시하는 메서드

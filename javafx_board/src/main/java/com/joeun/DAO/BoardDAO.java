@@ -6,10 +6,6 @@ import java.util.List;
 
 import com.joeun.DTO.Board;
 
-
-
-
-
 /**
  *  데이터 접근 객체
  *  - 게시글 데이터 접근
@@ -18,7 +14,6 @@ public class BoardDAO extends JDBConnection {
 	
 	// 데이터 목록
 	public List<Board> list() {
-      
 		// 게시글 목록을 담을 컬렉션 객체 생성
 		List<Board> boardList = new ArrayList<Board>();
 		
@@ -69,8 +64,6 @@ public class BoardDAO extends JDBConnection {
 				 + " FROM board "
 				 + " WHERE no = ? ";
   
-		
-				 
 				 try {
 					// 쿼리(SQL) 실행 객체 생성 - PreparedStatement (psmt)
 					psmt = con.prepareStatement(sql);
@@ -113,7 +106,6 @@ public class BoardDAO extends JDBConnection {
 			  // 게시글 정보 1건 반환
 		return board;
 	 }
-	
 	
 	// 데이터 등록
 	public int insert(Board board) {
@@ -192,6 +184,5 @@ public class BoardDAO extends JDBConnection {
 		}
 		return result;
 	}
-
 	
 }
