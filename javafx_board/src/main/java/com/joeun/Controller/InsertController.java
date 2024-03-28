@@ -1,5 +1,7 @@
 package com.joeun.Controller;
 
+import java.io.IOException;
+
 import com.joeun.App;
 import com.joeun.DTO.Board;
 import com.joeun.Service.BoardService;
@@ -49,5 +51,10 @@ public class InsertController {
             // 게시글 목록 화면(메인)으로 이동
             App.setRoot("board/List");
         }
+    }
+    // 목록 보기 처리
+    @FXML
+    void moveToList(ActionEvent event) throws IOException {
+        App.setRoot("board/List");
     }
 }

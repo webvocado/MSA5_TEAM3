@@ -27,7 +27,7 @@
             <version>21.5</version>
             <scope>system</scope>
             <!-- systemPath 를 ojdbc8.jar가 있는 개인의 경로로 수정하면됨 -->
-            <systemPath>D:\DH\SETUP\WINDOWS.X64_193000_db_home\jdbc\lib\ojdbc8.jar</systemPath>
+            <systemPath>d:\DOWNY\SETUP\sqldeveloper\sqldeveloper\extensions\oracle.sqldeveloper.pgql\lib\ojdbc8.jar</systemPath>
         </dependency>
     </dependencies>
     <build>
