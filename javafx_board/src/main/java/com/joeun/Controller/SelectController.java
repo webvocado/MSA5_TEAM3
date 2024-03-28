@@ -9,6 +9,7 @@ import com.joeun.Service.BoardServiceImpl;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -29,8 +30,19 @@ public class SelectController {
     static private BoardService boardService =  new BoardServiceImpl();
 
     @FXML
-    void delete(ActionEvent event) {
+    void delete(ActionEvent event) throws IOException {
         //글삭제
+        int no = Integer.parseInt(tSelect.getText());
+        int ret = boardService.delete(no);
+        
+        if (ret != 0) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("삭제");
+            alert.setHeaderText(null);
+            alert.setContentText("게시글을 삭제했어요");
+            alert.showAndWait(); // 대화상자를 표시하고 사용자 응답을 기다림
+            App.setRoot("board/list");
+        }
     }
 
     @FXML
