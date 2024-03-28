@@ -50,6 +50,4 @@ public class RegController {
             App.setRoot("user/login");
         }
     }
-
-
 }

@@ -35,12 +35,26 @@ public class SelectController {
 
     @FXML
     void update(ActionEvent event) {
+<<<<<<< HEAD
 
         Board board = new Board(tTitle.getText(), tWriter.getText(), tContent.getText());
         board.setNo( Integer.parseInt(tSelect.getText()) );
 
         boardService.update(board);
         
+=======
+        //글수정
+        int result = 0;
+
+        Board board = new Board(tTitle.getText(), tWriter.getText(),tContent.getText());
+        board.setNo( Integer.parseInt(tSelect.getText()) );
+        boardService.update(board);
+
+        if (result > 1) {
+             System.out.println("수정 반영완료");
+             // alert("수정반영완료");
+         }
+>>>>>>> 98c484f42a2b2816ef25ed0d8e9718fcd27823f9
     }
 
     @FXML
@@ -55,16 +69,32 @@ public class SelectController {
         // //조회버튼 눌렀을 때 작동할 함수
         board = boardService.select( Integer.parseInt(tSelect.getText()) );
 
-        // 원하는 게시글 잘 찾았는지 체크하는 출력문 (지워도됌)
+        // 원하는 게시글 잘 찾았는지 콘솔창에 체크하는 출력문 (지워도됌)
         System.out.println(board.getTitle());
         System.out.println(board.getWriter());
         System.out.println(board.getContent());
+<<<<<<< HEAD
 
         tTitle.setText(board.getTitle());
         tWriter.setText(board.getWriter());
         tContent.setText(board.getContent());
 
 
+=======
+      
+        //fxml화면에 조회된 타이틀, 작성자, 내용 뿌림
+        tTitle.setText(board.getTitle());
+        tWriter.setText(board.getWriter());
+        tContent.setText(board.getContent());
+>>>>>>> 98c484f42a2b2816ef25ed0d8e9718fcd27823f9
+    }
+
+    // 선택된 게시글 정보를 받아서 화면에 표시하는 메서드
+    public void setBoard(Board board) {
+        tSelect.setText(String.valueOf(board.getNo())); // 게시글 번호를 텍스트 필드에 설정
+        tTitle.setText(board.getTitle()); // 제목 설정
+        tWriter.setText(board.getWriter()); // 작성자 설정
+        tContent.setText(board.getContent()); // 내용 설정
     }
 
 }
