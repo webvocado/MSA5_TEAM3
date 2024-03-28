@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.joeun.Controller.SelectController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="927.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.joeun.Controller.SelectController">
    <children>
       <Label layoutX="28.0" layoutY="28.0" prefHeight="30.0" prefWidth="177.0" text="게시글 조회" textFill="#947d7d">
          <font>
@@ -77,6 +77,6 @@
          </font>
       </Button>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="193.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="본 화면에서 게시글 수정 후 수정 버튼을 누르면, 목록 보기에서 수정된 내용을 확인할 수 잇습니다 :)" />
+      <Text layoutX="193.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="본 화면에서 게시글 수정 후 수정 버튼을 누르면, 목록 보기에서 수정된 내용을 확인할 수 있습니다 :)" />
    </children>
 </AnchorPane>

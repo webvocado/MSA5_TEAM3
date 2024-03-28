@@ -55,12 +55,17 @@
       <Separator layoutX="319.0" layoutY="235.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="4.0" />
       <Separator layoutX="319.0" layoutY="189.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="4.0" />
       <Separator layoutX="319.0" layoutY="140.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="4.0" />
-      <Button layoutX="309.0" layoutY="569.0" mnemonicParsing="false" onAction="#insert" prefHeight="46.0" prefWidth="310.0" style="-fx-background-color: #F79F81;" text="계정 생성" textFill="WHITE">
+      <Button layoutX="309.0" layoutY="569.0" mnemonicParsing="false" onAction="#insert" prefHeight="46.0" prefWidth="141.0" style="-fx-background-color: #F79F81;" text="계정 생성" textFill="WHITE">
          <effect>
             <Blend mode="RED" />
          </effect>
       </Button>
       <Button layoutX="659.0" layoutY="188.0" mnemonicParsing="false" onAction="#doubleCheck" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #F79F81;" text="중복체크" textFill="WHITE">
+         <effect>
+            <Blend mode="RED" />
+         </effect>
+      </Button>
+      <Button layoutX="486.0" layoutY="569.0" mnemonicParsing="false" onAction="#moveToLogin" prefHeight="46.0" prefWidth="141.0" style="-fx-background-color: #F79F81;" text="뒤로 가기" textFill="WHITE">
          <effect>
             <Blend mode="RED" />
          </effect>
