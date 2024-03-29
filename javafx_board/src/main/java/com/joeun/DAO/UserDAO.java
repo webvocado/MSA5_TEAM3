@@ -9,7 +9,7 @@ import com.joeun.DTO.User;
 
 public class UserDAO extends JDBConnection {
     // 회원가입
-    public int insert(User userList) {
+    public int insert(User user) {
         int result = 0;
 
         // 유저 테이블에 담을 수 있도록 SQL문 작성
@@ -18,9 +18,9 @@ public class UserDAO extends JDBConnection {
         
         try {
             psmt = con.prepareStatement(sql);
-            psmt.setString(1, userList.getName());
-            psmt.setString(2, userList.getId());
-            psmt.setString(3, userList.getPw());
+            psmt.setString(1, user.getName());
+            psmt.setString(2, user.getId());
+            psmt.setString(3, user.getPw());
 
             result = psmt.executeUpdate();
 
