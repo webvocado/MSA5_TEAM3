@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="927.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.joeun.Controller.SelectController">
+   <children>
+      <Label layoutX="28.0" layoutY="28.0" prefHeight="30.0" prefWidth="177.0" text="게시글 조회" textFill="#947d7d">
+         <font>
+            <Font name="Bodoni MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tTitle" layoutX="158.0" layoutY="99.0" prefHeight="38.0" prefWidth="307.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="116.0" layoutY="109.0" text="제목" textFill="#947d7d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tWriter" layoutX="158.0" layoutY="155.0" prefHeight="38.0" prefWidth="307.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="109.0" layoutY="165.0" text="작성자" textFill="#947d7d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="tContent" layoutX="99.0" layoutY="210.0" prefHeight="377.0" prefWidth="747.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextArea>
+      <Button layoutX="261.0" layoutY="599.0" mnemonicParsing="false" onAction="#update" prefHeight="37.0" prefWidth="130.0" style="-fx-background-color: #F79F81;" text="게시글 수정" textFill="WHITE">
+         <font>
+            <Font name="Batang" size="17.0" />
+         </font>
+      </Button>
+      <ScrollBar layoutX="831.0" layoutY="212.0" orientation="VERTICAL" prefHeight="371.0" prefWidth="14.0" />
+      <Label layoutX="52.0" layoutY="380.0" text="내용" textFill="#947d7d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="72.0" prefHeight="0.0" prefWidth="901.0" />
+      <Separator layoutX="98.0" layoutY="209.0" orientation="VERTICAL" prefHeight="377.0" prefWidth="0.0" />
+      <Separator layoutX="98.0" layoutY="109.0" orientation="VERTICAL" prefHeight="86.0" prefWidth="6.0" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="408.0" layoutY="599.0" mnemonicParsing="false" onAction="#delete" prefHeight="37.0" prefWidth="130.0" style="-fx-background-color: #F79F81;" text="게시글 삭제" textFill="WHITE">
+         <font>
+            <Font name="Batang" size="17.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tSelect" layoutX="576.0" layoutY="155.0" prefHeight="38.0" prefWidth="130.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Button layoutX="715.0" layoutY="155.0" mnemonicParsing="false" onAction="#select" prefHeight="38.0" prefWidth="130.0" style="-fx-background-color: #F79F81;" text="게시글 조회" textFill="WHITE">
+         <font>
+            <Font name="Batang" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="553.0" layoutY="599.0" mnemonicParsing="false" onAction="#moveToList" prefHeight="37.0" prefWidth="130.0" style="-fx-background-color: #F79F81;" text="목록 보기" textFill="WHITE">
+         <font>
+            <Font name="Batang" size="17.0" />
+         </font>
+      </Button>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="849.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logo.png" />
+         </image>
+      </ImageView>
+      
+   </children>
+</AnchorPane>
