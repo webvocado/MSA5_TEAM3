@@ -1,5 +1,7 @@
 package com.joeun.Controller;
 
+import java.io.IOException;
+
 import com.joeun.App;
 import com.joeun.DTO.User;
 import com.joeun.Service.UserService;
@@ -93,4 +95,10 @@ public class RegController {
             IdCheckComplete = true;
         }
     }
+
+    @FXML
+    void moveToLogin(ActionEvent event) throws IOException {
+        App.setRoot("user/login");
+    }
+
 }
